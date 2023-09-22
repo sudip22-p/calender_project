@@ -1,0 +1,225 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+}
+main{
+    min-height: 100vh;
+    background-color: #fff;
+    padding: 20px;
+}
+div.wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: row;
+    padding: 0px 50px 0px 10px;
+}
+
+
+
+
+
+/*for form */
+div.wrapper section#form{
+    width: 35vw;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+div.wrapper section#form form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+/* 
+.blue-color{
+    color: #11224D;
+}
+.orange-color{
+    color: #F98125;
+} */
+h2,h4{
+    color: #11224D;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+h4{
+    font-size: 0.9rem;
+}
+form label{
+    margin-top: 8px;
+    font-size: 1.05rem;
+}
+input,textarea{
+    border-radius: 5px;
+    width: 100%;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 0 1px #ccc;
+    padding: 5px;
+    color: #333;
+}
+input{
+    height: 30px;
+}
+textarea{
+    height: 100px;
+}
+#booking-confirm-text{
+    color: #3587cd;
+    font-weight: 500;
+    margin-top: 20px;
+}
+#confirm-btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+.btn{
+    font-size: 15px;
+    font-weight: 450;
+    width: 70px;
+    padding: 7px 8px;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+    color: #333;
+    box-shadow: 0 0 0 1px #ccc;
+    border: 1px solid transparent;
+}
+.btn:hover{
+    color:white;
+    background-color: #333;
+    transition: 1s;
+}
+#submit{
+    background-color:#3587cd;
+    color: white;
+    height: auto;
+}
+#submit:hover{
+    color:#3587cd;
+    background-color: white;
+    border: 1px solid #3587cd;
+    transition: 1s;
+}
+    /*for calender part*/
+.wrapper section#calender-wrapper{
+    margin-top: 20px;
+    border-radius: 3px;
+    box-shadow: 0px 3px 12px rgb(18 74 233);
+}
+section#calender-wrapper header{
+    width: 100%;
+  display: flex;
+  align-items: center;
+  border-top: 5px solid #1145cb ;
+  padding: 3px 8px 0px 8px;
+  justify-content: space-between;
+}
+header .icons{
+  display: flex;
+}
+header .icons span{
+  height: 38px;
+  width: 38px;
+  margin: 0 1px;
+  cursor: pointer;
+  font-weight: bolder;
+  /* color: #157ce7; */
+  color: #3587cd;
+  text-align: center;
+  line-height: 38px;
+  font-size: 1.9rem;
+  user-select: none;
+  border-radius: 50%;
+}
+header .icons span:hover{
+  background: #f2f2f2;
+}
+header .current-date{
+  font-size: 1.15rem;
+  color: #333;
+  font-weight: 600;
+}
+.calendar{
+  width: 390px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  padding: 0px 10px;
+}
+.calendar ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+}
+.calendar .days{
+  margin-bottom: 20px;
+}
+.calendar li{
+  color: #333;
+  color: #11224D ;
+  width: calc(100% / 7);
+  font-size: 1.3rem;
+  padding: 20px;
+}
+.calendar .weeks li{
+    font-size: 1.15rem;
+    color: #333;
+    font-weight: 600;
+  cursor: default;
+  padding: 6px 6px;
+  box-shadow: 0 0 0 0.5px #ccc;
+}
+.calendar .days li{
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  padding: 6px 6px;
+  color:#3587cd;
+  box-shadow: 0 0 0 0.5px #ccc;
+}
+.days li.inactive{
+    color: white;
+}
+.days li.active{
+  color: #fff;
+}
+.days li.booked{
+  color: #fff;
+}
+.days li::before{
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 40px;
+  width: 52px;
+  z-index: -1;
+  border-radius: 5px;
+  transform: translate(-50%, -50%);
+}
+.days li.active::before{
+    box-shadow: 0 0 0 0.5px #ccc;
+    background: #3587cd;
+}
+.days li.booked::before{
+    box-shadow: 0 0 0 0.5px #ccc;
+  background: #b1b1b3;
+}
+.days li:not(.active):hover::before{
+  background: #f2f2f2;
+}
