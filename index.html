@@ -46,10 +46,23 @@
             <input id="name" name="name" type="text" required />
             <label class="blue-color" for="phone">Phone*</label>
             <input id="phone" name="phone" type="number" required />
-            <!-- <label class="blue-color" for="situation"
-              >What is your situation?*</label> -->
+            <label class="blue-color" for="situation"
+              >What is your situation?*</label>
+                  <select name="situation" id="situation">
+                      <option value="capitalGain" selected>
+                          Capital Gain from RE Sale
+                      </option>
+                      <option value="largePassive">
+                          Large passive Income
+                      </option>
+                      <option value="largeActive">
+                          Large active income tax
+                      </option>
+                  </select>
             <label class="blue-color" for="desc">Description</label>
             <textarea name="desc" id="desc"></textarea>
+            <!--for passing date to php file-->
+            <input type="text" id="hide-input">
             <div id="booking-section">
               <h2 id="booking-confirm-text">Booking Overview</h2>
               <div id="confirm-btn">

@@ -19,10 +19,6 @@ div.wrapper{
     padding: 0px 50px 0px 10px;
 }
 
-
-
-
-
 /*for form */
 div.wrapper section#form{
     width: 35vw;
@@ -51,7 +47,7 @@ form label{
     margin-top: 8px;
     font-size: 1.05rem;
 }
-input,textarea{
+input,textarea,select{
     border-radius: 5px;
     width: 100%;
     outline: none;
@@ -59,6 +55,7 @@ input,textarea{
     box-shadow: 0 0 0 1px #ccc;
     padding: 5px;
     color: #333;
+    background-color: white;
 }
 input{
     height: 35px;
@@ -68,6 +65,9 @@ textarea{
 }
 input:focus,textarea:focus{
   box-shadow: 0 0 0 1px #3587cd;
+}
+#hide-input{
+  display: none;
 }
 #booking-confirm-text{
     color: #3587cd;
@@ -241,3 +241,98 @@ header .current-date{
   box-shadow: 0 0 0 0.8px #ccc;
 }
 
+/*code for responsive page*/
+@media (max-width:889px) {
+  div.wrapper{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    padding: 0px 50px 0px 10px;
+  }
+  div.wrapper section#form{
+    width: 60vw;
+}
+}
+@media (max-width:789px) {
+  div.wrapper section#form{
+    width: 80vw;
+}
+}
+@media (max-width:489px) {
+.calendar{
+  width: 300px;
+}
+.calendar li{
+  font-size: 1.05rem;
+  padding: 20px;
+}
+.calendar .weeks li{
+  padding: 6px 6px;
+}
+.calendar .days li{
+  padding: 6px 6px;
+}
+.days li::before{
+  height: 36px;
+  width: 40px;
+}
+.days li.time-slot {
+  padding: 12px 10px;
+  font-size: 12px;
+}
+header .current-date {
+  font-size: 0.9rem;
+}
+div.wrapper{
+  padding-left: 50px;
+}
+.calendar .weeks li {
+  font-size: 1.05rem;
+}
+}
+@media (max-width:329px) {
+.calendar{
+  width: 240px;
+}
+.calendar li{
+  font-size: 0.8rem;
+  padding: 10px;
+}
+.calendar .weeks li{
+  padding: 3px 3px;
+}
+.calendar .days li{
+  padding: 3px 3px;
+}
+.days li::before{
+  height: 21px;
+  width: 31px;
+}
+.days li.time-slot {
+  padding: 9px 7px;
+  font-size: 9px;
+}
+header .current-date {
+  font-size: 0.7rem;
+}
+#booking-confirm-text{
+  font-size: 18px;
+}
+form label{
+  margin-top: 8px;
+  font-size: 0.8rem;
+}
+.calendar .weeks li {
+  font-size: 0.7rem;
+}
+}
+@media (max-width:257px) {
+.calendar{
+  width: 205px;
+}
+.days li::before{
+  height: 21px;
+  width: 26px;
+}
+}
