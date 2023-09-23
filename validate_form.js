@@ -17,7 +17,7 @@ document
     let isValid = true;
 
     fullName = document.getElementById("name").value;
-    if (fullName.trim() === "") {
+    if (fullName.trim() === ""||fullName.trim().length<3) {
       nameError = document.getElementById("name-error");
       if (!nameError) {
         let errorMsg = document.createElement("div");

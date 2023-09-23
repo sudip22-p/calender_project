@@ -39,13 +39,6 @@ div.wrapper section#form form{
     align-items: flex-start;
     flex-direction: column;
 }
-/* 
-.blue-color{
-    color: #11224D;
-}
-.orange-color{
-    color: #F98125;
-} */
 h2,h4{
     color: #11224D;
     font-weight: normal;
@@ -68,10 +61,13 @@ input,textarea{
     color: #333;
 }
 input{
-    height: 30px;
+    height: 35px;
 }
 textarea{
     height: 100px;
+}
+input:focus,textarea:focus{
+  box-shadow: 0 0 0 1px #3587cd;
 }
 #booking-confirm-text{
     color: #3587cd;
@@ -192,6 +188,11 @@ header .current-date{
   color:#3587cd;
   box-shadow: 0 0 0 0.5px #ccc;
 }
+
+.days li.past {
+  cursor: not-allowed;
+  color: #b1b1b3;;
+}
 .days li.inactive{
     color: white;
 }
@@ -223,3 +224,20 @@ header .current-date{
 .days li:not(.active):hover::before{
   background: #f2f2f2;
 }
+/*for time-slot*/
+.days li.time-slot{
+  width: 100%;
+  background-color: #f5f1e8;
+  padding: 20px 20px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template: repeat(3,1fr)/repeat(4,1fr);
+  font-size: 15px;
+  cursor:pointer;
+  display: none;
+}
+.days li.time-slot span{
+  box-shadow: 0 0 0 0.8px #ccc;
+}
+
